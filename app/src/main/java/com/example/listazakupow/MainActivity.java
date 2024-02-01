@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.listazakupw.R;
@@ -25,9 +26,12 @@ public class MainActivity extends AppCompatActivity {
     private DbHelper dbHelper;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView textAuthor = findViewById(R.id.textAuthor);
+        textAuthor.setText("Autor: Marcin Tarkowski");
 
         dbHelper = new DbHelper(this);
 
